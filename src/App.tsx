@@ -47,11 +47,15 @@ export default function App() {
         actual = Number(item.actual) || 0;
       }
       const gap = actual - plan;
+      const speed = Number(item.speedPerHour) || 70;
+      const planH = speed > 0 ? Number((plan / speed).toFixed(2)) : 0;
+
       return {
         ...item,
         plan,
         actual,
         gap,
+        planH,
       };
     });
 
