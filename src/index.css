@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+input, textarea {
+  spellcheck: false;
+  font-family: 'Tahoma', 'Arial', sans-serif !important;
+  font-weight: bold !important;
+}
+
+#report-container, #report-container *, #excel-report-capture, #excel-report-capture * {
+  font-family: 'Tahoma', 'Arial', sans-serif !important;
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    size: landscape;
+    margin: 0.5cm;
+  }
+
+  #excel-report-capture {
+    border: 2px solid black !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

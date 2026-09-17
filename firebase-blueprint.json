@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "Report": {
+      "title": "Daily Production Report",
+      "description": "A daily production report entity containing summary, line breakdown, hourly log, and analytics",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique report ID" },
+        "reportDate": { "type": "string", "description": "Date of report e.g. 31.1.2026" },
+        "timeRange": { "type": "string", "description": "Time frame e.g. 6h - 15h" },
+        "teamName": { "type": "string", "description": "Team name e.g. T. ANH" },
+        "manpower": { "type": "number", "description": "Main manpower count" },
+        "picking": { "type": "number", "description": "Picking personnel" },
+        "absent": { "type": "number", "description": "Absent personnel" },
+        "borrowed": { "type": "number", "description": "Borrowed personnel" },
+        "transferredSupport": { "type": "number", "description": "Transferred support personnel" },
+        "totalManpower": { "type": "number", "description": "Total active manpower" },
+        "lineItems": { "type": "string", "description": "JSON string of upper line production summary items" },
+        "hourlyLogs": { "type": "string", "description": "JSON string of lower hourly detail log items" },
+        "aiAnalysis": { "type": "string", "description": "AI analysis summary" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" },
+        "updatedAt": { "type": "string", "description": "Last update timestamp" }
+      },
+      "required": ["reportDate", "timeRange", "teamName"]
+    }
+  },
+  "firestore": {
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "Collection of daily production reports"
+    }
+  }
+}
