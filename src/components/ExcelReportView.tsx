@@ -834,9 +834,9 @@ export const ExcelReportView: React.FC<ExcelReportViewProps> = ({
                 <th className="border-r border-black py-2 px-1">Speed/H</th>
                 <th className="border-r border-black py-2 px-1">Plan(h)</th>
                 <th className="border-r border-black py-2 px-1">GAP</th>
-                <th className="border-r border-black py-2 px-1">Chuyển hỗ trợ</th>
-                <th className="border-r border-black py-2 px-1">Tổng</th>
-                <th className="py-2 px-1">TEAM</th>
+                <th className="border-r border-black py-2 px-1"></th>
+                <th className="border-r border-black py-2 px-1"></th>
+                <th className="py-2 px-1"></th>
               </tr>
 
               {/* 5. Table 1 Data Rows */}
